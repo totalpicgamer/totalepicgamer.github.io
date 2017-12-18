@@ -1,0 +1,38 @@
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",700,500);
+
+var background = new sjs.Image("Images/space.gif");
+
+background.setSize(sjs.getWidth(),sjs.getHeight())
+
+	var menu_text = new sjs.Text("Save the world from the ROBOTS", 28, "white");
+	menu_text.centerH();
+
+	var designBtn = new sjs.Button("Design Level", function(){
+	window.location = "platform.html";
+	});
+	designBtn.center();
+
+	var level1Btn = new sjs.Button("Level 1", function(){
+	window.location = "level1.html";
+	});
+	level1Btn.center();
+	level1Btn.offset(0,40)
+
+	var info_text = new sjs.Text("Created By Totalepicgamer", 20, "white");
+	info_text.bottom().centerH();
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Platform Game </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

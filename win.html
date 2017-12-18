@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Win </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",700,500);
+
+var background = new sjs.Image("Images/space2.gif");
+
+background.setSize(sjs.getWidth(),sjs.getHeight())
+
+
+var win_txt = new sjs.Text("YOU DEFEATED THE ROBOTS!", 44, "white");
+win_txt.center().offset(0,-50);
+
+var menuBtn = new sjs.Button("Main Menu", function(){
+window.location = "index.html";
+});
+
+var score_txt = new sjs.Text("Score: 0", 30, "white");
+score_txt.setText("Score: " +localStorage.getItem("score"));
+
+menuBtn.center();
+menuBtn.offset(0,10)
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> You Win </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
